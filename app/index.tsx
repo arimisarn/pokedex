@@ -1,15 +1,23 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import ThemedText from "@/components/ThemedText";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+    <SafeAreaView
+      style={
+        styles.container
+      }
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+      <ThemedText variant="headline" color="grayWhite">Pokedex</ThemedText>
+    </SafeAreaView> 
   );
 }
+
+const styles = StyleSheet.create({
+  container : {
+    backgroundColor : '#FF0000',
+
+  }
+})
